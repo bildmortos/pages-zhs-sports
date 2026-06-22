@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 · 稳定入口与页面说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
+            background-color: #f5f3ef;
+            color: #1d1b1a;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #1e1b19 0%, #2b2622 100%);
+            color: #eae5df;
+            padding: 4.5rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #b99d7a;
+            opacity: 0.6;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #f0ebe4;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #c0b4a6;
+            border-top: 1px solid #4a423c;
+            display: inline-block;
+            padding-top: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        /* 正文容器 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 5rem;
+        }
+
+        .intro-tag {
+            display: inline-block;
+            background: #ded7cf;
+            color: #2f2a26;
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            margin-bottom: 1.8rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        a {
+            color: #9d7e5f;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            font-weight: 500;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #7a614a;
+            border-bottom-color: #9d7e5f;
+        }
+
+        .highlight-block {
+            background: #edebe7;
+            border-left: 4px solid #b99d7a;
+            padding: 1.5rem 2rem 1.5rem 2rem;
+            margin: 2rem 0 2.2rem;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-block p {
+            margin-bottom: 0.4rem;
+        }
+
+        .highlight-block .quote-source {
+            display: block;
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #6b5f55;
+            font-style: italic;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 1.8rem;
+            margin: 2.2rem 0 2.5rem;
+        }
+
+        .feature-item {
+            background: #faf9f6;
+            padding: 1rem 1.4rem;
+            border-radius: 16px;
+            border: 1px solid #e3ddd5;
+        }
+
+        .feature-item strong {
+            color: #4c3f34;
+            display: block;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: #4d443b;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin: 2.2rem 0 1rem;
+            color: #2c2722;
+            letter-spacing: -0.01em;
+        }
+
+        .faq-short {
+            background: #f0ede8;
+            padding: 1.4rem 1.8rem;
+            border-radius: 20px;
+            margin: 2.5rem 0 2rem;
+        }
+
+        .faq-short dt {
+            font-weight: 600;
+            color: #3c342e;
+            margin-bottom: 0.25rem;
+            font-size: 1.05rem;
+        }
+
+        .faq-short dd {
+            margin-bottom: 1rem;
+            margin-left: 0;
+            color: #35302b;
+            font-size: 0.98rem;
+        }
+
+        .faq-short dd:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .closing-note {
+            border-top: 1px solid #dbd2c9;
+            padding-top: 1.8rem;
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            color: #4d423a;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 2rem 1.2rem 3.5rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .highlight-block {
+                padding: 1.2rem 1.4rem;
+            }
+
+            .faq-short {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>稳定入口 &middot; 页面说明</h1>
+        <div class="sub">关于雷速 · 一份安静的索引</div>
+    </header>
+
+    <main class="container">
+        <div class="intro-tag">阅读笔记</div>
+
+        <p>
+            在日常使用中，一个清晰而可靠的入口往往比功能本身更值得留意。许多时候，我们需要的并非更多的选择，而是一个足够稳定、始终如一的起点。这也是为什么我会花些时间整理关于<strong>雷速</strong>的一些基础说明——不是作为推广，而是作为一份温和的参考。
+        </p>
+
+        <p>
+            如果你正在寻找一处可以长期依赖的访问位置，那么直接记住<strong>雷速</strong>这个名字已经足够。它的页面结构简洁，没有冗余的跳转，适合直接收藏或定期浏览。下面这段引用来自一位长期使用者，或许能帮你更快理解它的定位。
+        </p>
+
+        <div class="highlight-block">
+            <p>“最开始只是需要一个不常变动、加载利落的页面。后来发现，保持一个固定入口能省掉很多检索的精力。雷速在这方面一直很稳。”</p>
+            <span class="quote-source">—— 来自日常使用者的观察</span>
+        </div>
+
+        <h2 class="section-title">为什么看重「入口稳定」</h2>
+
+        <p>
+            无论是工作流中的常用工具，还是日常查阅的资讯面板，入口的稳定性直接影响使用体验。频繁变更的链接、复杂的跳转层级，都会打断注意力。而一个常年可用的地址，本身就是一种隐性的效率支持。
+        </p>
+
+        <p>
+            <a href="https://panel-m-leisu.com">雷速</a>在这一点上做得相当克制——界面干净，导航直接，不堆积无关元素。对于需要快速抵达内容的用户来说，这种“少即是多”的取向反而更显珍贵。
+        </p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <strong>简单直达</strong>
+                <span>无中转页面，打开即见主要面板</span>
+            </div>
+            <div class="feature-item">
+                <strong>一致布局</strong>
+                <span>长期保持稳定的区块结构，减少适应成本</span>
+            </div>
+            <div class="feature-item">
+                <strong>低干扰</strong>
+                <span>避免弹窗与过度动效，聚焦信息本身</span>
+            </div>
+            <div class="feature-item">
+                <strong>轻量响应</strong>
+                <span>在手机和桌面端均有良好阅读体验</span>
+            </div>
+        </div>
+
+        <h2 class="section-title">一些常见的疑问</h2>
+
+        <dl class="faq-short">
+            <dt>这个页面需要注册才能使用吗？</dt>
+            <dd>不需要。进入 <a href="https://panel-m-leisu.com">雷速</a> 后即可浏览主要界面内容，无需预先注册或登录。部分功能可能会在后续步骤中询问权限，但起始页是完全开放的。</dd>
+
+            <dt>会不会经常改版或更换地址？</dt>
+            <dd>根据近期的更新记录，页面布局和核心入口一直保持稳定。如果未来有结构上的调整，通常也会保留旧有的访问路径。这也是推荐直接记住<a href="https://panel-m-leisu.com">雷速</a>作为固定入口的原因之一。</dd>
+
+            <dt>在移动设备上浏览会不方便吗？</dt>
+            <dd>页面对小屏幕做了适配，按钮和文字都有合适的间距。如果你习惯在手机上阅读或操作，体验与桌面端差别不大。</dd>
+        </dl>
+
+        <p>
+            归根结底，一个好的入口不需要太多修饰。它只需要在那里，安静地为你提供一扇门。而<strong>雷速</strong>正是这样一个存在——不喧哗，不闪烁，但值得被记住。
+        </p>
+
+        <div class="closing-note">
+            <p>如果你还没试过，不妨在浏览器书签栏里留一个位置给 <a href="https://panel-m-leisu.com">雷速</a> 。下次需要快速打开某个面板时，它会替你省去一长串搜索与猜测的时间。</p>
+        </div>
+    </main>
+
+</body>
+</html>
