@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>稳定可靠的体育平台 · 半岛体育</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1e1e2a;
+      background: #f5f7fc;
+    }
+
+    /* 深色头图 ———— 故事氛围 */
+    .hero {
+      background: linear-gradient(145deg, #0b0e1a 0%, #1b2035 100%);
+      color: #e8edf5;
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -3rem;
+      top: -2rem;
+      width: 16rem;
+      height: 16rem;
+      background: radial-gradient(circle, rgba(255, 180, 60, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-weight: 400;
+      font-size: 2.2rem;
+      letter-spacing: 0.02em;
+      max-width: 720px;
+      margin: 0 auto 0.8rem;
+    }
+
+    .hero h1 strong {
+      font-weight: 600;
+      color: #f8c150;
+    }
+
+    .hero .tagline {
+      font-size: 0.95rem;
+      color: #b4bedb;
+      max-width: 520px;
+      margin: 0.4rem auto 1.6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.2rem;
+    }
+
+    .hero .short-note {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #cfd7ec;
+    }
+
+    /* 浅色正文区 */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3.5rem;
+    }
+
+    .intro-block {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    .intro-block p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2c3040;
+    }
+
+    .intro-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 2rem 0 2rem;
+    }
+
+    .feature-card {
+      background: #fafbff;
+      border-radius: 18px;
+      padding: 1.4rem 1.2rem 1.2rem;
+      border-left: 5px solid #f3b84b;
+      transition: background 0.2s ease;
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #1b2035;
+      letter-spacing: 0.01em;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #3b4157;
+      margin: 0.2rem 0 0;
+      line-height: 1.5;
+    }
+
+    .feature-card:hover {
+      background: #f3f5fd;
+    }
+
+    .scene-note {
+      background: #f0f3fa;
+      border-radius: 20px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.8rem 0 2rem;
+      font-size: 0.95rem;
+      color: #262b3a;
+    }
+
+    .scene-note span {
+      display: inline-block;
+      background: #ffffffd6;
+      padding: 0.1rem 0.6rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #0b0e1a;
+      margin-right: 0.4rem;
+    }
+
+    .faq-summary {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem 1.6rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      margin-top: 1.6rem;
+    }
+
+    .faq-summary h4 {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #1b2035;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid #e8ecf5;
+      padding-bottom: 0.4rem;
+    }
+
+    .faq-item {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0.5rem 0 0.3rem;
+      border-bottom: 1px solid #edeff7;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      width: 120px;
+      color: #1b2035;
+      font-size: 0.9rem;
+    }
+
+    .faq-a {
+      flex: 1;
+      font-size: 0.9rem;
+      color: #3e445b;
+      padding-left: 0.4rem;
+    }
+
+    .closing {
+      text-align: center;
+      margin-top: 2.8rem;
+      padding-top: 1.6rem;
+      border-top: 1px solid #d9deed;
+    }
+
+    .closing small {
+      font-size: 0.85rem;
+      color: #5f6680;
+      display: block;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #1f5cbb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s, border-bottom 0.15s;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover {
+      color: #0a3a7a;
+      border-bottom-color: #1f5cbb;
+    }
+
+    .link-highlight {
+      color: #c7860e;
+      border-bottom: 1px dashed #c7860e80;
+    }
+
+    .link-highlight:hover {
+      color: #a36808;
+      border-bottom-color: #c7860e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+      }
+
+      .intro-block {
+        padding: 1.6rem 1.2rem;
+      }
+
+      .faq-summary {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .faq-item {
+        flex-direction: column;
+      }
+
+      .faq-q {
+        width: auto;
+        margin-bottom: 0.1rem;
+      }
+
+      .faq-a {
+        padding-left: 0;
+      }
+
+      .container {
+        padding: 2rem 1rem 2.5rem;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .hero {
+        padding: 3rem 1rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 1.4rem;
+      }
+      .scene-note span {
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 头图 · 开场短句 -->
+  <header class="hero">
+    <h1>
+      每一次进入，都是一次<br>
+      沉稳的<strong>半岛体育</strong>体验
+    </h1>
+    <div class="tagline">
+      从稳定的入口出发，浏览、发现、延续习惯
+    </div>
+    <div class="short-note">
+      ⚡ 页面说明 · 入口清晰，内容聚焦
+    </div>
+  </header>
+
+  <!-- 正文区 -->
+  <main class="container">
+
+    <!-- 承接段落 -->
+    <section class="intro-block">
+      <p>
+        对许多用户而言，体育平台的可达性与稳定性是长期关注的前提。  
+        <strong>半岛体育</strong> 在界面结构、响应速度和信息层级上保持着克制的设计语言，  
+        让访问者能够以较低的认知负担找到自己需要的赛事、数据或资讯模块。
+      </p>
+      <p>
+        不需要反复跳转或猜测路径——从首页到具体页面，流程经过反复收敛。  
+        这也是为什么很多用户将 <a href="https://cnweb-bdsport.com" class="link-highlight">半岛体育</a> 视为日常浏览体育内容的首选入口之一：  
+        简洁、可靠、不冗余。
+      </p>
+    </section>
+
+    <!-- 特点列表（卡片式） -->
+    <h2 style="font-weight: 400; font-size: 1.15rem; color: #1b2035; margin: 0.2rem 0 0.6rem; letter-spacing: 0.02em;">
+      ▎几个突出特点
+    </h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>入口稳定</h3>
+        <p>域名长期可访问，页面加载耗时控制在合理范围，减少等待与中断。</p>
+      </div>
+      <div class="feature-card">
+        <h3>信息分层</h3>
+        <p>赛事预告、实时比分、数据回顾分布在清晰的导航结构下，不杂乱。</p>
+      </div>
+      <div class="feature-card">
+        <h3>低干扰布局</h3>
+        <p>没有过度推送或弹层打乱阅读节奏，视觉重心由用户自己控制。</p>
+      </div>
+      <div class="feature-card">
+        <h3>适配多端</h3>
+        <p>从桌面到移动设备，版式与字号自动调整，保持一致的浏览体验。</p>
+      </div>
+    </div>
+
+    <!-- 场景细节 -->
+    <div class="scene-note">
+      <span>🏟️ 常见场景</span>
+      许多用户习惯在比赛日直接打开 <a href="https://cnweb-bdsport.com" style="font-weight: 500;">半岛体育</a>，  
+      快速浏览当日焦点对阵，或查阅历史交锋数据——页面结构为此留出了足够的空间，  
+      没有冗余装饰，信息获取效率较高。
+    </div>
+
+    <!-- FAQ 摘要（温和、信息密度稍高） -->
+    <section class="faq-summary">
+      <h4>❓ 页面相关 · 简短说明</h4>
+      <div class="faq-item">
+        <div class="faq-q">入口地址</div>
+        <div class="faq-a">
+          <a href="https://cnweb-bdsport.com">半岛体育</a> 为当前推荐访问地址，长期有效。
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">内容覆盖</div>
+        <div class="faq-a">足球、篮球、网球等主流赛事，以及部分综合性体育资讯。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">使用提示</div>
+        <div class="faq-a">建议在稳定的网络环境下浏览，以获得最佳加载表现。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">其他说明</div>
+        <div class="faq-a">平台不收集非必要信息，页面内无诱导广告内容。</div>
+      </div>
+    </section>
+
+    <!-- 温和结尾 -->
+    <div class="closing">
+      <small>
+        从入口开始，保持专注。<br>
+        由 <a href="https://cnweb-bdsport.com" style="font-weight: 400;">半岛体育</a> 呈现的页面环境，  
+        适合放慢节奏，认真阅读每一场赛事背后的细节。
+      </small>
+    </div>
+
+  </main>
+</body>
+</html>
